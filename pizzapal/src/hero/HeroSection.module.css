@@ -1,0 +1,95 @@
+.heroSection {
+    background-color: #fff;
+    display: flex;
+    padding-bottom: 91px;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: Inter, sans-serif;
+    color: #fff;
+    font-weight: 400;
+  }
+  
+  .heroContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 60px 60px;
+    position: relative;
+    min-height: 933px;
+    width: 100%;
+    margin-top: 0px;
+    align-items: flex-end;
+    padding: 237px 80px;
+  }
+  
+  .heroBackground {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    top: -100px;
+    right: 0;
+  }
+  
+  .heroTitle {
+    position: relative;
+    font-size: 48px;
+    max-width: 500px;
+    text-align: left;
+    top: 0;
+    bottom: 0;
+    right: -500px;
+    left: -150px;
+  }
+  
+  .heroDescription {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 52px;
+    text-align: left;
+    top: 320px;
+    bottom: 0;
+    right: 0px;
+    left: 1330px;
+    max-width: 550px;
+
+  }
+  
+  .ctaButton {
+    position: absolute;
+    border-radius: 60px;
+    background-color: #f7be52;
+    font-size: 24px;
+    color: #000;
+    margin: 49px 37px -51px 0;
+    padding: 19px 32px;
+    border: none;
+    cursor: pointer;
+    top: auto;
+    bottom: 850px;
+    right: 515px;
+    left: auto;
+  }
+  
+  @media (max-width: 991px) {
+    .heroContainer {
+      max-width: 100%;
+      padding: 100px 20px;
+    }
+  
+    .heroTitle {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  
+    .heroDescription {
+      max-width: 100%;
+      margin: 40px 10px 0 0;
+    }
+  
+    .ctaButton {
+      margin: 40px 10px 10px 0;
+      padding: 19px 32px;
+    }
+  }

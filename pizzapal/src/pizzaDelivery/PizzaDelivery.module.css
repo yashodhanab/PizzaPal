@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
+
 .container {
     gap: 20px;
     display: flex;
@@ -50,7 +55,7 @@
     flex-direction: column;
     line-height: normal;
     width: 56%;
-    margin-left: 20px;
+    margin-left: -20px;
   }
   @media (max-width: 991px) {
     .contentSection {
@@ -97,6 +102,7 @@
     line-height: normal;
     width: 42%;
     margin-left: 20px;
+    margin-top: 50px;
   }
   @media (max-width: 991px) {
     .featuresSection {
@@ -154,4 +160,3 @@
       margin-top: 40px;
     }
   }
-  

@@ -1,0 +1,52 @@
+.pizza-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .pizza-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .pizza-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .pizza-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .pizza-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pizza-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .add-to-cart-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #ff4500;
+  }
+  

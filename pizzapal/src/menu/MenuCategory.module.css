@@ -1,0 +1,15 @@
+.menuCategory {
+    border-radius: 25px;
+    background-color: #fff;
+    padding: 5px 24px;
+    border: 2px solid #F4551B;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 991px) {
+    .menuCategory {
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
