@@ -16,9 +16,10 @@
     position: relative;
     min-height: 933px;
     width: 100%;
+
     margin-top: 0px;
     align-items: flex-end;
-    padding: 237px 80px;
+    /* padding: 237px 80px; */
   }
   
   .heroBackground {
@@ -29,18 +30,23 @@
     object-fit: cover;
     object-position: center;
     top: -100px;
+    bottom: 100px;
     right: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   
   .heroTitle {
-    position: relative;
+    position: absolute;
     font-size: 48px;
     max-width: 500px;
     text-align: left;
-    top: 0;
-    bottom: 0;
-    right: -500px;
-    left: -150px;
+    top: 150px;
+    /* bottom: 0; */
+    right: -700px;
+    left: 1325px;
   }
   
   .heroDescription {
@@ -48,7 +54,7 @@
     font-size: 20px;
     margin-top: 52px;
     text-align: left;
-    top: 320px;
+    top: 250px;
     bottom: 0;
     right: 0px;
     left: 1330px;
@@ -66,9 +72,9 @@
     padding: 19px 32px;
     border: none;
     cursor: pointer;
-    top: auto;
-    bottom: 850px;
-    right: 515px;
+    top: 440px;
+    bottom: auto;
+    right: 355px;
     left: auto;
   }
   

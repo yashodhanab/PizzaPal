@@ -1,9 +1,11 @@
 import * as React from "react";
 import styles from './HeroSection.module.css';
+import Navigation from "../Navbar/Navigation";
 
 export default function HeroSection() {
   return (
     <section className={styles.heroSection}>
+      
       <div className={styles.heroContainer}>
         <img
           loading="lazy"

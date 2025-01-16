@@ -23,6 +23,8 @@ export default function Card(){
                   alt="preparation "
                 />
                 <span className={styles.timeText}>10 Mins</span>
+                <br />
+                <span className={styles.timeText}>10 Mins</span>
               </div>
             </div>
           </div>

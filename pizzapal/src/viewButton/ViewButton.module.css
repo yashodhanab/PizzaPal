@@ -1,0 +1,32 @@
+.buttonContainer {
+    border-radius: 25px;
+    display: flex;
+    max-width: 171px;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 1);
+    font: 400 24px Inter, sans-serif;
+    justify-content: center;;
+    margin-top: -350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    
+  }
+  
+  .actionButton {
+    border-radius: 25px;
+    background-color: rgba(244, 85, 27, 1);
+    padding: 21px 41px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actionButton:hover {
+    background-color: rgba(224, 65, 7, 1);
+  }
+  
+  .actionButton:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }

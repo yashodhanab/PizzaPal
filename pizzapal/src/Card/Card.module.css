@@ -7,6 +7,9 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.114);
     border-radius: 10px;
     padding: 5px 5px 5px 5px;
+    position: relative;
+    left: 160px;
+    top: -450px;
   }
   
   .imageContainer {
@@ -61,6 +64,14 @@
     font-weight: 500;
     justify-content: start;
   }
+
+  .timeContainer {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+    gap: 5px; /* Add spacing between elements */
+  }
+  
   
   .timeIcon {
     aspect-ratio: 1;
@@ -74,6 +85,7 @@
   .timeText {
     align-self: stretch;
     margin: auto 0;
+    
   }
   
   .visually-hidden {

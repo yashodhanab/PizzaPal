@@ -3,14 +3,12 @@
     padding: 0;
    
 }
-.background{
-    background-color: yellow;
-    height: 910px;
-}
+
 
 .container {
     margin: 0 auto;
-    padding: 20px;
-    max-width: 1200px;
+    padding: 0px;
+    
   }
+  
   

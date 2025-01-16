@@ -4,13 +4,16 @@
     flex-direction: column;
     font-family: Inter, sans-serif;
     font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .menuTitle {
     color: #EB9A00;
     font-size: 40px;
     align-self: center;
-    margin-left: 34px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0px;
   }
   
