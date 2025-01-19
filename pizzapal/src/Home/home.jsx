@@ -32,6 +32,7 @@ function Home(){
         <Card/>
         <Card/>
         <Card/>
+        
         <ViewButton/>
         <Footer/>
 

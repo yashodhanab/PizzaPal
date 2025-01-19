@@ -1,0 +1,294 @@
+.menu-page {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+  }
+  
+  .category-sidebar {
+    background-color: #eee7e7;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ff4500;
+    height: 700px;
+    width: 350px;
+    text-align: center;
+    margin-right: 30px;
+  }
+
+ .category-title{
+    font-size: 21px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    top: 2px;
+    background-color: #ff6347;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+ }
+
+  .category-list {
+    
+    list-style: none;
+    padding: 0;
+    margin : 0;
+    background-color : rgb(250, 250, 250);
+    border-radius: 20px;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+    
+  }
+  
+  .category-list li {
+    background-color: #ffffff; /* Box color for each category */
+    border: 1px solid #ffffff; /* Optional: Border for each box */
+    border-radius: 10px; /* Rounded corners for the boxes */
+    margin: 10px 0; /* Space between boxes */
+    padding: 10px 15px; /* Padding inside the boxes */
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    text-align: center; /* Center-align text in the box */
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+  }
+  .category-list li:hover {
+    background-color: #ff6347; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+  }
+
+  .menu-design{
+
+    display: flex;
+    flex-direction: row;
+   
+    width: 100%;
+    
+
+  }
+
+  /* //////////////////////////////////////////////////////////// */
+/* .menu-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20%;
+    left: -350%;
+    width: 100%;
+}
+
+.menu-content h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu-cards {
+    display: flex; 
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+} */
+
+.menu-header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 37px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0; /* Adds space around the header */
+  color: #ff6347; /* Matches the theme */
+
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column; /* Stacks the header and cards */
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 auto; /* Centers the menu content horizontally */
+  position: relative; /* Allows for position adjustments if needed */
+  top: -20px; /* Adds space between the header and cards */
+}
+  
+  .menu-content h2 {
+    margin-bottom: 20px;
+    position: relative;
+    top: 20px;
+    text-align: center;
+    left: auto;
+    right: auto;
+  }
+  
+  .menu-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Cards will flow in rows */
+    gap: 20px; /* Spacing between cards */
+    width: 90%; /* Limits the width of the cards section */
+    margin-top: 20px; /* Adds space between header and cards */
+    justify-content: center;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+  }
+
+  .card-description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+
+  .card-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff4400;
+  }
+
+  .card-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .card-button:hover {
+    background-color: #ff4500;
+  }
+
+  @media (max-width: 768px) {
+    .menu-cards {
+      grid-template-columns: 1fr; /* Stacks cards vertically on smaller screens */
+    }
+  
+    .menu-header {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+  }
+
+  
+
+  /* /////////////////////////////////////////////////////////////// */
+  .checkout-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    position: relative;
+    top: 0%;
+    font-family: 'Montserrat', sans-serif;
+    width: 350px;
+  }
+  
+  .order-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .order-list li {
+    padding: 10px 0;
+    font-size: 16px;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .total-price {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+
+  }
+  
+  .checkout-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .checkout-button:hover {
+    background-color: #ff4500;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu-page {
+      grid-template-columns: 1fr; /* Stack all sections vertically */
+    }
+  
+    .menu-content {
+      margin-top: 20px;
+    }
+  
+    .checkout-section {
+      margin-top: 20px;
+    }
+  }
+  
+  /* //////////////////////////// */
+
+  .search-bar {
+    margin-bottom: 15px; /* Space between the search bar and category title */
+    display: flex;
+    justify-content: start;
+    align-items: start;    
+    width: 350px;
+    left: 0px;
+    width: 90%; /* Adjust width to fit within the container */
+}
+  
+  .search-input {
+    width: 350px;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-input::placeholder {
+    color: #aaa;
+  }

@@ -1,201 +1,102 @@
-/* .navigationContainer {
-    border-radius: 0;
-    display: flex;
-    flex-direction: column;
-    
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .locationWrapper {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .mainNavigation {
-    /* background-image: url('../assets/pattern.jpg');
-    background-color: red;
-    display: flex;
-    width: 100%;
-    padding: 0 20px;
-    gap: 40px 60px;
-    flex-wrap: wrap;
+.navigationBar {
+  background-color: rgba(0, 0, 0, 1);
+  padding: 9px 0px;
+  width: 100%;
+  margin: 0px 0px;
+}
 
-  }
-  
-  @media (max-width: 991px) {
-    .mainNavigation {
-        height: 60px; 
-    }
-    .mainNavigation {
-      max-width: 100%;
-    }
-  }
-  
-  .navigationLinks {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    flex-basis: auto;
-    margin-left: -20px;
-  }
-  
-  @media (max-width: 991px) {
-    .navigationLinks {
-      max-width: 100%;
-    }
-  }
-  
-  .logoContainer {
-    background-color: rgba(217, 217, 217, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    padding: 9px 30px;
-  }
-  
-  @media (max-width: 991px) {
-    .logoContainer {
-      padding-left: 20px;
-    }
-  }
-  
-  .logo {
-    aspect-ratio: 0.98;
-    object-fit: contain;
-    object-position: center;
-    width: 100px;
-  }
-  
-  .navLink {
-    background-color: rgba(217, 217, 217, 1);
-    color: rgba(0, 0, 0, 1);
-    white-space: nowrap;
-    padding: 46px 41px;
-    font: 400 24px Inter, sans-serif;
+.navigationContent {
+  gap: 20px;
+  display: flex;
+}
 
-  }
-  
-  @media (max-width: 991px) {
-    .navLink {
-      white-space: initial;
+.navigationLinks {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  gap: 40px 54px;
+  color: rgba(255, 255, 255, 1);
+  font: 400 24px Inter, sans-serif;
+}
+
+.logo {
+  aspect-ratio: 0.98;
+  object-fit: contain;
+  object-position: center;
+  width: 100px;
+  align-self: stretch;
+  max-width: 100%;
+  position: relative;
+  left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Scale logo on hover for interaction */
+}
+
+.navLink {
+  align-self: stretch;
+  margin: auto 0;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: rgba(244, 85, 27, 1); /* Change to orange color on hover */
+}
+
+.userSection {
+  display: flex;
+  gap: 30px;
+  align-self: stretch;
+  color: rgba(255, 255, 255, 1);
+  margin: auto 60px;
+  font: 800 24px Inter, sans-serif;
+}
+
+.userSection:hover {
+  color: rgba(244, 85, 27, 1); /* Change user section color on hover */
+}
+
+.userAvatar {
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 50%;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  transition: background-color 0.3s ease;
+}
+
+.userAvatar:hover {
+  background-color: rgba(244, 85, 27, 1); /* Change avatar background to orange */
+}
+
+.userName {
+  flex-basis: auto;
+  margin: auto 0;
+}
+
+@media (max-width: 991px) {
+  .navigationBar {
+      max-width: 100%;
       padding: 0 20px;
-    }
   }
-  
-  .authContainer {
-    align-self: start;
-    display: flex;
-    margin-top: 14px;
-    gap: 15px;
-    color: rgba(0, 0, 0, 1);
-    font: 400 15px Inter, sans-serif;
-  }
-  
-  .loginButton {
-    border-radius: 30px;
-    background-color: rgba(217, 217, 217, 1);
-    margin: auto 0;
-    padding: 6px 33px;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 991px) {
-    .loginButton {
-      padding: 0 20px;
-    }
-  }
-  
-  .userIcon {
-    background-color: rgba(217, 217, 217, 1);
-    border-radius: 50%;
-    display: flex;
-    width: 35px;
-    height: 35px;
-  }
- */
- .navigationBar {
-    /* border-radius: 0 0 25px 25px; */
-    background-color: rgba(0, 0, 0, 1);
-    
-    padding: 9px 28px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
+
   .navigationContent {
-    gap: 20px;
-    display: flex;
-  }
-  
-  .navigationLinks {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    gap: 40px 54px;
-    color: rgba(255, 255, 255, 1);
-    font: 400 24px Inter, sans-serif;
-  }
-  
-  .logo {
-    aspect-ratio: 0.98;
-    object-fit: contain;
-    object-position: center;
-    width: 100px;
-    align-self: stretch;
-    max-width: 100%;
-  }
-  
-  .navLink {
-    align-self: stretch;
-    margin: auto 0;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 1);
-    text-decoration: none;
-  }
-  
-  .userSection {
-    display: flex;
-    gap: 30px;
-    align-self: stretch;
-    color: rgba(255, 255, 255, 1);
-    margin: auto 60px;
-    font: 800 24px Inter, sans-serif;
-  }
-  
-  .userAvatar {
-    background-color: rgba(217, 217, 217, 1);
-    border-radius: 50%;
-    display: flex;
-    width: 45px;
-    height: 45px;
-  }
-  
-  .userName {
-    flex-basis: auto;
-    margin: auto 0;
-  }
-  
-  @media (max-width: 991px) {
-    .navigationBar {
-      max-width: 100%;
-      padding: 0 20px;
-    }
-  
-    .navigationContent {
       flex-direction: column;
       align-items: stretch;
       gap: 0;
-    }
-  
-    .navigationLinks {
-      max-width: 100%;
-      margin-top: 40px;
-    }
-  
-    .userSection {
-      margin-top: 40px;
-    }
   }
 
+  .navigationLinks {
+      max-width: 100%;
+      margin-top: 40px;
+  }
+
+  .userSection {
+      margin-top: 40px;
+  }
+}

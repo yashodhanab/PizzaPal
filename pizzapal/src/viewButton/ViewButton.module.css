@@ -1,32 +1,60 @@
+/* Container for the button */
 .buttonContainer {
-    border-radius: 25px;
-    display: flex;
-    max-width: 171px;
-    flex-direction: column;
-    color: rgba(255, 255, 255, 1);
-    font: 400 24px Inter, sans-serif;
-    justify-content: center;;
-    margin-top: -350px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 200px;
-    
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -400px;
+  margin-bottom: 100px;
+  max-width: 200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Action button */
+.actionButton {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #FF6F61; /* Updated to match theme */
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hover effect for the button */
+.actionButton:hover {
+  background-color: #FF9F66; /* Lighter red color for hover */
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Focused button styling */
+.actionButton:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5); /* Glow effect for focus */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
   .actionButton {
-    border-radius: 25px;
-    background-color: rgba(244, 85, 27, 1);
-    padding: 21px 41px;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s ease;
+    padding: 12px 30px;
+    font-size: 16px;
   }
-  
-  .actionButton:hover {
-    background-color: rgba(224, 65, 7, 1);
+}
+
+@media (max-width: 480px) {
+  .actionButton {
+    padding: 10px 25px;
+    font-size: 14px;
   }
-  
-  .actionButton:focus {
-    outline: 2px solid #fff;
-    outline-offset: 2px;
-  }
+}

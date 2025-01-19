@@ -9,23 +9,28 @@
   }
   
   .menuTitle {
-    color: #EB9A00;
-    font-size: 40px;
-    align-self: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0px;
+    color: #FF6F61; /* Updated to a more appetizing pizza red color */
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -60px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+
   }
-  
+
   .categoriesContainer {
     display: flex;
-    margin-top: 35px;
+    margin-top: 0px;
     gap: 20px;
     font-size: 32px;
     color: #F4551B;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    margin-left: auto;
+    margin-right: auto;
   }
   
   @media (max-width: 991px) {

@@ -17,7 +17,7 @@
     min-height: 933px;
     width: 100%;
 
-    margin-top: 0px;
+    margin-top: 80px;
     align-items: flex-end;
     /* padding: 237px 80px; */
   }
@@ -64,19 +64,35 @@
   
   .ctaButton {
     position: absolute;
-    border-radius: 60px;
-    background-color: #f7be52;
+    border-radius: 50px; /* More rounded edges */
+    background-color: #FF6F61; /* Orange background */
     font-size: 24px;
-    color: #000;
-    margin: 49px 37px -51px 0;
-    padding: 19px 32px;
+    color: #FFF; /* White text for contrast */
+    padding: 18px 36px;
     border: none;
     cursor: pointer;
-    top: 440px;
-    bottom: auto;
-    right: 355px;
-    left: auto;
+    top: 470px;
+    right: 385px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for a floating effect */
   }
+  
+  .ctaButton:hover {
+    background-color: #F4551B; /* Darker orange on hover */
+    transform: translateY(-5px); /* Slight movement on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+  }
+  
+  .ctaButton:focus {
+    outline: 2px solid #FFF; /* White focus outline for accessibility */
+    outline-offset: 2px;
+  }
+  
+  .ctaButton:active {
+    background-color: #D9431F; /* Even darker orange when button is clicked */
+    transform: translateY(1px); /* Button presses down on click */
+  }
+
   
   @media (max-width: 991px) {
     .heroContainer {

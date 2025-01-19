@@ -24,7 +24,7 @@ export default function Card(){
                 />
                 <span className={styles.timeText}>10 Mins</span>
                 <br />
-                <span className={styles.timeText}>10 Mins</span>
+                <span className={styles.timeText2}>10 Mins</span>
               </div>
             </div>
           </div>

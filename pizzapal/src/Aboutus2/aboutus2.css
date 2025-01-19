@@ -1,0 +1,118 @@
+Global Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* About Us Page */
+  .about-us-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10%;
+  }
+  
+  .about-us-header {
+    text-align: center;
+    background: #000000;;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-us-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-us-header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  
+  .about-us-content {
+    width: 100%;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .about-us-content h2 {
+    font-size: 2rem;
+    color: #ff6f61;
+    margin-bottom: 15px;
+  }
+  
+  .about-us-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #555;
+  }
+  
+  .about-us-content .story, .about-us-content .mission, .about-us-content .contact {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-us-content .story:hover, .about-us-content .mission:hover, .about-us-content .contact:hover {
+    transform: translateY(-10px);
+  }
+  
+  .about-us-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-us-content ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-us-footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-us-page {
+      padding: 30px 5%;
+    }
+  
+    .about-us-content {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-us-header h1 {
+      font-size: 2rem;
+    }
+  
+    .about-us-header p {
+      font-size: 1rem;
+    }
+  
+    .about-us-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .about-us-content p {
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -66,7 +66,7 @@ const navItems = [
   { text: 'Menu', href: '/menu' },
   { text: 'Offers', href: '/offers' },
   { text: 'About Us', href: '/about' },
-  { text: 'Null', href: '#' }
+  { text: 'Orders', href: '/about' }
 ];
 
 function Navigation() {

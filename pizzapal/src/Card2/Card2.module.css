@@ -1,0 +1,164 @@
+/* .card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .cardContent {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+  .cardTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .cardDescription {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cardPrice {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff4500;
+  }
+  
+  .cardButton {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cardButton:hover {
+    background-color: #ff4500;
+  }
+   */
+
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for better appearance */
+  border-radius: 15px; /* Rounded corners */
+  padding: 25px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+  width: 350px; /* Set a consistent width */
+  height: auto; /* Allow height to adjust based on content */
+  margin: 20px; /* Add spacing around the card */
+}
+
+
+  .card:hover {
+    transform: translateY(-10px); /* Hover effect for a floating effect */
+  }
+  
+  .cardImage {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+  }
+  
+  .cardTitle {
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .cardDescription {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .pizzaInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #F4551B; /* Matching theme color */
+  }
+  
+  .pizzaName {
+    font-weight: bold;
+  }
+  
+  .pizzaSize {
+    font-style: italic;
+  }
+  
+  .cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cardPrice {
+    font-size: 20px;
+    font-weight: 600;
+    color: #EB9A00; /* Highlight price */
+  }
+  
+  .cardButton {
+    padding: 12px 24px;
+    background-color: #F4551B;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cardButton:hover {
+    background-color: #D14D0A;
+  }
+  
