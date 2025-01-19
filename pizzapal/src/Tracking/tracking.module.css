@@ -1,0 +1,145 @@
+.container {
+    font-family: 'Inter', sans-serif;
+    padding: 40px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .heading {
+    font-size: 36px;
+    color: #f4551b;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .trackingSection {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .progress {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .progressBar {
+    width: 100%;
+    height: 10px;
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .progressFill {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #f4551b, #eb9a00);
+    border-radius: 5px;
+  }
+  
+  .status {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .completed {
+    color: #28a745;
+  }
+  
+  .current {
+    color: #f4551b;
+  }
+  
+  .pending {
+    color: #888;
+  }
+  
+  .mapSection {
+    height: 400px;
+    width: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #666;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  .mapIframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-left: -150px;
+  }
+  
+  .orderSummary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+  }
+  
+  .orderSummary h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .orderSummary h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #555;
+  }
+  
+  .itemsList {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #333;
+    list-style-type: disc;
+  }
+  
+  .actions {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .moreItemsButton {
+    padding: 15px 30px;
+    background: linear-gradient(to right, #f4551b, #eb9a00);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+  }
+  
+  .moreItemsButton:hover {
+    background: #eb9a00;
+  }
+  
+  .contactSupportButton {
+    padding: 15px 30px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+  }
+  
+  .contactSupportButton:hover {
+    background: #444;
+  }
+  
+  

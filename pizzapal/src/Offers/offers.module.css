@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container for the Offers Page */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Heading for Offers */
+  .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* List of Offer Cards */
+  .offerList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Individual Offer Card */
+  .offerCard {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .offerCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image inside each offer */
+  .offerImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 4px solid #ddd;
+  }
+  
+  /* Content inside each offer */
+  .offerContent {
+    padding: 25px;
+  }
+  
+  /* Title of the Offer */
+  .offerTitle {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  /* Description of the Offer */
+  .offerDescription {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  /* Discount Label */
+  .offerDiscount {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 25px;
+  }
+  
+  /* Button to Claim the Offer */
+  .offerButton {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .offerButton:hover {
+    background-color: #218838;
+  }
+  
+  @media (max-width: 768px) {
+    .offerList {
+      grid-template-columns: 1fr;
+    }
+  }
+  

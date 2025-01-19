@@ -14,6 +14,9 @@ import Menupage from './Menupage/menupage.jsx'
 import AboutUs2 from './Aboutus2/aboutus2.jsx'
 import Login from './Login/login.jsx'
 import SignInPage from './Login2/login2.jsx'
+import OrdersPage from './Ordering/ordering.jsx'
+import TrackingPage from './Tracking/tracking.jsx'
+import OfferPage from './Offers/offers.jsx'
 
 const App = () => {
   return (
@@ -30,10 +33,12 @@ const App = () => {
         {/* <Login/> */}
 
         <SignInPage/>
-       
 
-      
+        <OrdersPage/>
 
+        <TrackingPage/>
+
+        <OfferPage/>
 
     </div>
   )

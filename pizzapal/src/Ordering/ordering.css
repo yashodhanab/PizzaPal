@@ -1,0 +1,148 @@
+/* Orders.css */
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f8fc;
+  }
+  
+  .orders-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .orders-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #f4851d;
+    margin-bottom: 30px;
+  }
+  
+  .orders-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .order-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .order-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .order-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .delivery-time {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .order-items {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin: 20px 0;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .total-price {
+    font-weight: 700;
+    color: #f4851d;
+  }
+  
+  .tracking-status {
+    font-weight: 600;
+    color: #4caf50;
+  }
+  
+  .track-order-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #f4851d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .track-order-button:hover {
+    background-color: #e26a00;
+  }
+  
+  /* Order More Items Section */
+  .order-more-container {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f7be52;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin-left: 180px;
+  }
+  
+  .order-more-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .order-more-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .order-more-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-more-button:hover {
+    background-color: #388e3c;
+  }
+  
