@@ -125,10 +125,12 @@
   }
   
   .menu-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Cards will flow in rows */
-    gap: 20px; /* Spacing between cards */
-    width: 90%; /* Limits the width of the cards section */
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;  */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; /* Limits the width of the cards section */
     margin-top: 20px; /* Adds space between header and cards */
     justify-content: center;
   }

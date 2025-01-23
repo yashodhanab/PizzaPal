@@ -81,7 +81,7 @@
   position: relative;
   transition: transform 0.3s ease-in-out;
   background-color: #fff;
-  width: 350px; /* Set a consistent width */
+  width: 275px; /* Set a consistent width */
   height: auto; /* Allow height to adjust based on content */
   margin: 20px; /* Add spacing around the card */
 }

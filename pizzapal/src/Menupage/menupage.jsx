@@ -62,23 +62,7 @@ const MenuPage = () => {
       image: 'path/to/fruit-salad.jpg',
       price: 450,
       size: 'Regular'
-    },
-    {
-      id: 9,
-      name: 'Cola',
-      image: 'path/to/cola.jpg',
-      price: 150,
-      size: '500ml'
-    },
-    {
-      id: 10,
-      name: 'Lemonade',
-      image: 'path/to/lemonade.jpg',
-      price: 180,
-      size: '500ml'
     }
-
-    
   ];
 
   return (
