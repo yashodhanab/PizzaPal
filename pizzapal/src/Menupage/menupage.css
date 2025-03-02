@@ -57,10 +57,14 @@
     text-align: center; /* Center-align text in the box */
     transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
   }
-  .category-list li:hover {
-    background-color: #ff6347; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
+  
+  .category-list li:hover,
+  .category-list li.active {
+    background-color: #ff6600;
+    color: white;
   }
 
   .menu-design{

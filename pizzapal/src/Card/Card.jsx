@@ -1,30 +1,21 @@
-import styles from './Card.module.css'
-import margherita from '../assets/margherita.png';
+import styles from './Card.module.css';
 
-export default function Card(){
+export default function Card({ title, imageSrc, prepTime }) {
     return (
         <div className={styles.card}>
           <div className={styles.imageContainer}>
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/017eca55e3920753fcfda153a3beccc7e838d20b165c9c1aa0cba4a0df75d52d?placeholderIfAbsent=true&apiKey=a1d617f711a944dd8adac60765cf8c49"
+              src={imageSrc}
               className={styles.foodImage}
-              alt="Creamy salad dish presentation"
+              alt={title}
             />
           </div>
           <div className={styles.contentWrapper}>
             <div className={styles.contentContainer}>
-              <h2 className={styles.title}>Creamy Salad</h2>
+              <h2 className={styles.title}>{title}</h2>
               <div className={styles.timeContainer}>
-                <img
-                  loading="lazy"
-                  src={margherita}
-                  className={styles.timeIcon}
-                  alt="preparation "
-                />
-                <span className={styles.timeText}>10 Mins</span>
-                <br />
-                <span className={styles.timeText2}>10 Mins</span>
+                <span className={styles.timeText}>{prepTime}</span>
               </div>
             </div>
           </div>

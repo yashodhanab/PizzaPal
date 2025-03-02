@@ -1,0 +1,82 @@
+.newArrivalsPage {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;  /* Allow cards to wrap */
+    gap: 30px;  /* Increase space between cards */
+    justify-content: center;  /* Center cards in the container */
+  }
+  
+  .card {
+    display: flex;
+    background: white;
+    width: calc(50% - 30px);  /* Adjust width to fit 2 cards per row */
+    max-width: 500px;  /* Set max-width for cards */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .foodImage {
+    width: 180px;  /* Increase image width */
+    height: 120px;  /* Increase image height */
+    object-fit: cover;
+  }
+  
+  .info {
+    flex: 1;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .pizzaName {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .desc {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .price {
+    font-size: 18px;
+    color: #ff6600;
+    font-weight: 600;
+  }
+  
+  .viewAll {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .viewAll:hover {
+    background: #e65c00;
+  }
+  

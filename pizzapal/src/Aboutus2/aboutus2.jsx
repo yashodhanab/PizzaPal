@@ -36,11 +36,13 @@ const AboutUs2 = () => {
         </div>
       </section>
 
-      <section className="about-us-footer">
+      {/* <section className="about-us-footer">
         <p>&copy; 2025 PizzaPal. All Rights Reserved.</p>
-      </section>
+      </section> */}
     </div>
   );
 };
 
 export default AboutUs2;
+
+

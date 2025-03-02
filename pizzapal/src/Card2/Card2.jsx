@@ -37,7 +37,7 @@ const MenuCard = ({ title, description, price, image, pizzaName, pizzaSize }) =>
         </div>
 
         <div className={styles.cardFooter}>
-          <span className={styles.cardPrice}>${price}</span>
+          <span className={styles.cardPrice}>Rs.{price}</span>
           <button className={styles.cardButton}>Add to Cart</button>
         </div>
       </div>

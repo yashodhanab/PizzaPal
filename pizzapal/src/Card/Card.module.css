@@ -1,42 +1,40 @@
 .card {
   display: inline-flex;
-  max-width: 375px;
+  max-width: 350px; /* Increased width */
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Softer, more subtle shadow */
-  border-radius: 15px; /* Slightly more rounded corners */
-  padding: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Softer, more prominent shadow */
+  border-radius: 20px; /* More rounded corners */
+  padding: 30px; /* Increased padding */
   position: relative;
-  left: 160px;
-  top: -450px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  left: 100px;
+  top: -400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Slight lift effect on hover */
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15); /* Increased shadow depth */
+  transform: translateY(-12px); /* Lift effect */
+  box-shadow: 0 22px 35px rgba(0, 0, 0, 0.2); /* More depth */
 }
 
 .imageContainer {
-  border-radius: 15px 15px 0 0; /* Smooth rounded top corners */
+  border-radius: 20px 20px 0 0;
   background-color: rgba(255, 255, 255, 1);
   display: flex;
   width: 100%;
-  flex-direction: column;
   overflow: hidden;
 }
 
 .foodImage {
-  aspect-ratio: 1.34;
-  object-fit: cover; /* Adjusted for a better fill of the container */
-  object-position: center;
+  aspect-ratio: 1.4;
+  object-fit: cover;
   width: 100%;
-  border-radius: 15px 15px 0 0; /* Rounded top corners for the image */
-  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+  border-radius: 20px 20px 0 0;
+  transition: transform 0.3s ease;
 }
 
 .card:hover .foodImage {
-  transform: scale(1.05); /* Slight zoom-in effect on hover */
+  transform: scale(1.08); /* Zoom-in effect */
 }
 
 .contentWrapper {
@@ -45,60 +43,42 @@
   flex-direction: column;
   font-family: 'Inter', sans-serif;
   justify-content: start;
-  padding-top: 20px;
+  padding: 25px; /* More padding for better spacing */
 }
 
 .contentContainer {
-  border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+  border-radius: 0 0 20px 20px;
   background-color: rgba(255, 255, 255, 1);
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 20px;
-  gap: 10px; /* Space between content elements */
+  padding: 25px; /* Increased padding */
+  gap: 15px; /* More spacing between content elements */
 }
 
 .title {
-  font-size: 28px; /* Slightly smaller to maintain balance */
+  font-size: 30px; /* Bigger title */
   color: #000;
-  font-weight: 600;
+  font-weight: 700; /* Bolder text */
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .timeContainer {
   display: flex;
-  flex-direction: row; /* Row direction for better spacing */
+  flex-direction: row;
   align-items: center;
-  gap: 10px;
-  font-size: 16px;
+  gap: 12px;
+  font-size: 18px; /* Slightly larger text */
   color: rgba(4, 110, 27, 1);
   font-weight: 500;
-  justify-content: start;
 }
 
 .timeContainer .timeIcon {
-  width: 18px; /* Adjusted icon size */
+  width: 22px; /* Bigger icon */
 }
 
-.timeText {
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.7); /* Lighter text color */
-}
-
-.timeText2 {
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.7); /* Lighter text color */
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+.timeText, .timeText2 {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8); /* Darker for better contrast */
 }

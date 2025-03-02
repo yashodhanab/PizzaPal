@@ -57,16 +57,18 @@
 
 // export default Navigation;
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-import React from 'react';
 import styles from './NavigationStyles.module.css';
+import React from 'react';
+import { Link } from 'react-router-dom';  
 
 const navItems = [
   { text: 'Home', href: '/' },
   { text: 'Menu', href: '/menu' },
   { text: 'Offers', href: '/offers' },
-  { text: 'About Us', href: '/about' },
-  { text: 'Orders', href: '/about' }
+  { text: 'About Us', href: '/about-us' },
+  { text: 'Orders', href: '/orders' }
 ];
 
 function Navigation() {
@@ -92,7 +94,8 @@ function Navigation() {
           ))}
         </div>
         <div className={styles.userSection}>
-          <span className={styles.userName}>John Smith</span>
+          {/* <span className={styles.userName}>Log in</span> */}
+          <Link to="/login" className={styles.userName}>Log in</Link>
           <div className={styles.userAvatar} role="img" aria-label="User avatar" />
         </div>
       </div>
@@ -101,3 +104,4 @@ function Navigation() {
 }
 
 export default Navigation;
+

@@ -30,12 +30,13 @@
     object-fit: cover;
     object-position: center;
     top: -100px;
-    bottom: 100px;
+    bottom: 800px;
     right: 0;
     background-size: cover;
-    background-position: center;
+    background-position: center 20px;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    transform: translateY(-50px); /* Move background up */
   }
   
   .heroTitle {
