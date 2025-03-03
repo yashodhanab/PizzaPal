@@ -162,3 +162,111 @@
     background-color: #D14D0A;
   }
   
+
+
+
+
+
+
+  /* Card container */
+.card {
+  position: relative;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Image wrapper for positioning */
+.cardImageWrapper {
+  position: relative;
+}
+
+/* Card image */
+/* .cardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+} */
+
+/* Description popup */
+.descriptionPopup {
+  display: none;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 1);
+  color: #fff;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  z-index: 1;
+  width: 90%;
+  text-align: center;
+  height: 70px;
+}
+
+/* Show description popup on hover */
+.card:hover .descriptionPopup {
+  display: block;
+}
+
+/* Card content styling */
+.cardContent {
+  padding: 10px;
+}
+
+/* Title of the pizza */
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Pizza size */
+/* .pizzaInfo {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #666;
+} */
+
+/* Footer with price and button */
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Price styling */
+/* .cardPrice {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e94e77;
+} */
+
+/* Add to Cart button */
+/* .cardButton {
+  background-color: #e94e77;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+} */
+
+/* Hover effect on the button */
+/* .cardButton:hover {
+  background-color: #d13d5c;
+} */
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.05);
+}

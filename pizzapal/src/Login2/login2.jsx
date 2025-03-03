@@ -67,10 +67,42 @@ const SignInPage = () => {
   const navigate = useNavigate(); // Initialize navigate hook
 
   // Handle form submission
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent the default form submission
-    // After successful login (assuming login logic is added), navigate to another page
-    navigate('/home'); // Replace '/home' with the route you want to navigate to after login
+
+    // Get email and password from the form
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    try {
+      // Send a POST request to the backend
+      const response = await fetch('http://localhost:5000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      // Parse the response
+      const data = await response.json();
+
+      if (response.ok) {
+        // If login is successful, store user data in local storage
+        localStorage.setItem('user', JSON.stringify(data.user));
+
+        // Navigate to the home page
+        alert(data.message || 'Login successful');
+        console.log('Login successful:', data.message);
+        navigate('/');
+      } else {
+        // If login fails, show an error message
+        alert(data.message || 'Login failed');
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('An error occurred. Please try again.');
+    }
   };
 
   return (
@@ -96,6 +128,7 @@ const SignInPage = () => {
               <input 
                 type="email" 
                 id="email" 
+                name="email" // Add name attribute
                 placeholder="Enter your email" 
                 required 
               />
@@ -105,6 +138,7 @@ const SignInPage = () => {
               <input 
                 type="password" 
                 id="password" 
+                name="password" // Add name attribute
                 placeholder="Enter your password" 
                 required 
               />
@@ -118,7 +152,7 @@ const SignInPage = () => {
             <button type="submit" className="signin-button">Sign In</button>
           </form>
           <p className="signin-footer">
-            New here? <a href="#">Create an account</a>
+            New here? <a href="#" onClick={() => navigate('/register')}>Create an account</a>
           </p>
         </div>
       </div>

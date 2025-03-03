@@ -130,3 +130,80 @@
       margin-top: 40px;
   }
 }
+/* Style for the user section */
+.userSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Style for the login button container */
+.loginButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f4851d;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect for the login button */
+.loginButton:hover {
+  background-color: #e26a00; /* Slightly darker on hover */
+  transform: translateY(-5px); /* Button lifts slightly */
+}
+
+/* Style for the login button text */
+.loginText {
+  margin-right: 8px;
+  transition: opacity 0.3s ease;
+}
+
+/* Style for the icon inside the button */
+.loginIcon {
+  width: 20px;
+  height: 20px;
+  background: url('https://cdn-icons-png.flaticon.com/512/883/883155.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0; /* Initially hide icon */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect to show the icon */
+.loginButton:hover .loginIcon {
+  opacity: 1; /* Show icon */
+  transform: translateX(5px); /* Icon moves slightly to the right */
+}
+
+/* Hover effect for the login button text */
+.loginButton:hover .loginText {
+  opacity: 0; /* Fade out the text */
+}
+
+/* Add a subtle pulse effect for the button */
+.loginButton:focus,
+.loginButton:active {
+  animation: pulse 1.2s ease-out infinite;
+}
+
+/* Keyframes for pulse effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -125,6 +125,7 @@ import SignInPage from './Login2/login2.jsx';
 import OrdersPage from './Ordering/ordering.jsx';
 import TrackingPage from './Tracking/tracking.jsx';
 import OfferPage from './Offers/offers.jsx';
+import RegisterPage from './register/RegisterPage.jsx';
 import './App.css';
 
 const App = () => {
@@ -143,6 +144,7 @@ const App = () => {
         <Route path="/offers" element={<OfferPage />} />
         <Route path="/menu" element={<MenuSection />} />
         <Route path="/null" element={<Home />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Routes>
 
       <Footer />  {/* Footer appears on all pages */}
@@ -157,7 +159,9 @@ const NavigationWrapper = () => {
   return (
     <>
       {/* Conditionally render Navigation */}
-      {location.pathname !== '/login' && <Navigation />}
+      {/* {location.pathname !== '/login' && <Navigation />} */}
+      {!(location.pathname === '/login' || location.pathname === '/register') && <Navigation />}
+
     </>
   );
 }

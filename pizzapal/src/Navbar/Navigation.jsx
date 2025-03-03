@@ -60,18 +60,36 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 import styles from './NavigationStyles.module.css';
-import React from 'react';
-import { Link } from 'react-router-dom';  
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const navItems = [
   { text: 'Home', href: '/' },
   { text: 'Menu', href: '/menu' },
   { text: 'Offers', href: '/offers' },
   { text: 'About Us', href: '/about-us' },
-  { text: 'Orders', href: '/orders' }
+  { text: 'Orders', href: '/orders' },
 ];
 
 function Navigation() {
+  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+
+  // Check if the user is logged in on component mount
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem('user'));
+    if (userData) {
+      setUser(userData);
+    }
+  }, []);
+
+  // Handle logout
+  const handleLogout = () => {
+    localStorage.removeItem('user'); // Clear user data from local storage
+    setUser(null); // Update state to reflect logged-out status
+    navigate('/login'); // Navigate to the login page
+  };
+
   return (
     <nav className={styles.navigationBar}>
       <div className={styles.navigationContent}>
@@ -93,9 +111,24 @@ function Navigation() {
             </a>
           ))}
         </div>
+
         <div className={styles.userSection}>
-          {/* <span className={styles.userName}>Log in</span> */}
-          <Link to="/login" className={styles.userName}>Log in</Link>
+          {user ? (
+            // Display username and logout button if user is logged in
+            <>
+              <span className={styles.userName}>{user.name}</span>
+              <button onClick={handleLogout} className={styles.loginButton}>
+                <span className={styles.loginText}>Logout</span>
+                <div className={styles.loginIcon} aria-label="Logout icon"></div>
+              </button>
+            </>
+          ) : (
+            // Display login button if user is not logged in
+            <Link to="/login" className={styles.loginButton}>
+              <span className={styles.loginText}>Log in</span>
+              <div className={styles.loginIcon} aria-label="Login icon"></div>
+            </Link>
+          )}
           <div className={styles.userAvatar} role="img" aria-label="User avatar" />
         </div>
       </div>
@@ -104,4 +137,5 @@ function Navigation() {
 }
 
 export default Navigation;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

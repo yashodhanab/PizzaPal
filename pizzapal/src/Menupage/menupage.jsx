@@ -1,89 +1,63 @@
 import React, { useState } from 'react';
 import './menuPage.css';
-import Card2 from '../Card2/Card2'; // Assuming you already have a Card component
+import Card2 from '../Card2/Card2'; // Ensure correct import
+import { Link, useNavigate } from 'react-router-dom';
 
 const MenuPage = () => {
-  // State for selected category
   const [selectedCategory, setSelectedCategory] = useState('Pizzas');
+  const [cart, setCart] = useState([]);
+  const [showPopup, setShowPopup] = useState(false); 
+  const navigate = useNavigate(); // Initialize navigate hook
 
-   // State for the cart
-   const [cart, setCart] = useState([]);
-
-  // Full menu items list
   const menuItems = [
-    // Pizzas
     { id: 1, name: 'Margherita Pizza', image: '/pizza1.jpg', price: 3200, size: 'Medium', category: 'Pizzas' },
     { id: 2, name: 'Veggie Supreme Pizza', image: '/1(5).jpg', price: 4400, size: 'Large', category: 'Pizzas' },
-    { id: 3, name: 'Pepperoni Pizza', image: '1 (4).jpg', price: 2500, size: 'Large', category: 'Pizzas' },
-    { id: 4, name: 'Cheese Delight Pizza', image: '1 (1).jpg', price: 4300, size: 'Medium', category: 'Pizzas' },
-    { id: 5, name: 'Hawaiian Pizza', image: '1 (9).jpg', price: 2600, size: 'Large', category: 'Pizzas' },
-    { id: 6, name: 'BBQ Chicken Pizza', image: '1 (10).jpg', price: 4700, size: 'Medium', category: 'Pizzas' },
-    { id: 7, name: 'Four Cheese Pizza', image: '/pizza4.jpg', price: 1800, size: 'Large', category: 'Pizzas' },
-    { id: 8, name: 'Seafood Pizza', image: '/pizza5.jpg', price: 2000, size: 'Medium', category: 'Pizzas' },
-  
-    // Salads
-    { id: 9, name: 'Caesar Salad', image: '1 (12).jpg', price: 500, size: 'Regular', category: 'Salads' },
-    { id: 10, name: 'Greek Salad', image: '1 (18).jpg', price: 550, size: 'Regular', category: 'Salads' },
-    { id: 11, name: 'Caprese Salad', image: '1 (19).jpg', price: 600, size: 'Regular', category: 'Salads' },
-    { id: 12, name: 'Cobb Salad', image: '1 (20).jpg', price: 650, size: 'Regular', category: 'Salads' },
-  
-    // Beverages
-    { id: 13, name: 'Lemonade', image: '1 (14).jpg', price: 350, size: 'Regular', category: 'Beverages' },
-    { id: 14, name: 'Cold Coffee', image: '1 (15).jpg', price: 400, size: 'Regular', category: 'Beverages' },
-    { id: 15, name: 'Iced Tea', image: '1 (21).jpg', price: 450, size: 'Regular', category: 'Beverages' },
-    { id: 16, name: 'Orange Juice', image: '1 (22).jpg', price: 350, size: 'Regular', category: 'Beverages' },
-  
-    // Snacks
-    { id: 17, name: 'Garlic Bread', image: '1 (16).jpg', price: 600, size: 'Regular', category: 'Snacks' },
-    { id: 18, name: 'Cheese Sticks', image: '1 (23).jpg', price: 500, size: 'Regular', category: 'Snacks' },
-    { id: 19, name: 'Breadsticks', image: '1 (24).jpg', price: 450, size: 'Regular', category: 'Snacks' },
-    { id: 20, name: 'Mozzarella Sticks', image: '1 (25).jpg', price: 550, size: 'Regular', category: 'Snacks' },
-  
-    // Desserts
-    { id: 21, name: 'Chocolate Lava Cake', image: '1 (26).jpg', price: 500, size: 'Regular', category: 'Desserts' },
-    { id: 22, name: 'Tiramisu', image: '1 (27).jpg', price: 450, size: 'Regular', category: 'Desserts' },
-    { id: 23, name: 'Cheesecake', image: '1 (28).jpg', price: 600, size: 'Regular', category: 'Desserts' },
-    { id: 24, name: 'Fruit Salad', image: '1 (29).jpg', price: 400, size: 'Regular', category: 'Desserts' },
-  
-    // Combos
-    { id: 25, name: 'Pizza + Drink Combo', image: '1 (30).jpg', price: 1700, size: 'Medium', category: 'Combos' },
-    { id: 26, name: 'Pizza + Salad Combo', image: '1 (31).jpg', price: 1800, size: 'Medium', category: 'Combos' },
-    { id: 27, name: 'Pizza + Snack Combo', image: '1 (32).jpg', price: 1900, size: 'Large', category: 'Combos' },
-    { id: 28, name: 'Pizza + Dessert Combo', image: '1 (33).jpg', price: 2000, size: 'Medium', category: 'Combos' },
-  
-    // Specials
-    { id: 29, name: 'Chef’s Special Pizza', image: '1 (34).jpg', price: 2200, size: 'Large', category: 'Specials' },
-    { id: 30, name: 'Veggie Delight Special', image: '1 (35).jpg', price: 2100, size: 'Medium', category: 'Specials' },
-    { id: 31, name: 'BBQ Feast Special', image: '1 (36).jpg', price: 2400, size: 'Large', category: 'Specials' },
-    { id: 32, name: 'Family Special Combo', image: '1 (37).jpg', price: 2500, size: 'Large', category: 'Specials' }
+    { id: 3, name: 'Pepperoni Pizza', image: '/1 (4).jpg', price: 2500, size: 'Large', category: 'Pizzas' },
+    { id: 4, name: 'Cheese Delight Pizza', image: '/1 (1).jpg', price: 4300, size: 'Medium', category: 'Pizzas' },
+    { id: 5, name: 'Hawaiian Pizza', image: '/1 (9).jpg', price: 2600, size: 'Large', category: 'Pizzas' },
+    { id: 6, name: 'BBQ Chicken Pizza', image: '/1 (10).jpg', price: 4700, size: 'Medium', category: 'Pizzas' },
+    { id: 7, name: 'Four Cheese Pizza', image: '/1 (8).jpg', price: 1800, size: 'Large', category: 'Pizzas' },
+    { id: 8, name: 'Seafood Pizza', image: '/1 (11).jpg', price: 2000, size: 'Medium', category: 'Pizzas' },
+
+    { id: 9, name: 'Caesar Salad', image: '/salad(1).jpg', price: 500, size: 'Regular', category: 'Salads' },
+    { id: 10, name: 'Greek Salad', image: '/salad(2).jpg', price: 550, size: 'Regular', category: 'Salads' },
+
+    { id: 13, name: 'Coke', image: '/coke.jpg', price: 350, size: 'Regular', category: 'Beverages' },
+    { id: 14, name: 'Milkshake', image: '/milkshake.jpg', price: 400, size: 'Regular', category: 'Beverages' },
+
+    { id: 17, name: 'Garlic Bread', image: '/garlicbread.jpg', price: 600, size: 'Regular', category: 'Snacks' },
+    { id: 18, name: 'Cheese Sticks', image: '/cheasesticks.jpg', price: 500, size: 'Regular', category: 'Snacks' },
+
+    { id: 21, name: 'Chocolate Lava Cake', image: '/lavacake.jpg', price: 500, size: 'Regular', category: 'Desserts' },
+    { id: 22, name: 'Cheesecake', image: '/cheesecake.jpg', price: 450, size: 'Regular', category: 'Desserts' },
   ];
-  
 
-  // Categories list
-  const categories = ['Pizzas', 'Salads', 'Beverages', 'Snacks', 'Desserts', 'Combos', 'Specials'];
+  const categories = ['Pizzas', 'Salads', 'Beverages', 'Snacks', 'Desserts'];
 
-  // Filter menu items based on selected category
   const filteredItems = menuItems.filter(item => item.category === selectedCategory);
 
-    // Method to add item to cart
-    const addToCart = (item) => {
-      setCart((prevCart) => [...prevCart, item]);
-    };
-  
-    // Calculate total price of the cart
-    const calculateTotal = () => {
-      return cart.reduce((total, item) => total + item.price, 0);
-    };
-    
-  return (
-    <div className="menu-page">
-      {/* Search Bar */}
-      <div className="search-bar">
-        <input type="text" className="search-input" placeholder="Search categories..." />
-      </div>
+  const addToCart = (item) => {
+    setCart(prevCart => [...prevCart, item]);
+  };
 
+  const calculateTotal = () => cart.reduce((total, item) => total + item.price, 0);
+
+
+  // Handle Checkout Button Click
+  const handleCheckout = () => {
+    if (cart.length > 0) {
+      setShowPopup(true);
+    }
+  };
+
+  // Close the popup
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
+return (
+    <div className="menu-page">
       <div className="menu-design">
-        {/* Left Sidebar (Category Selection) */}
         <div className="category-sidebar">
           <h3 className="category-title">CATEGORIES</h3>
           <ul className="category-list">
@@ -99,7 +73,6 @@ const MenuPage = () => {
           </ul>
         </div>
 
-        {/* Center Menu Section */}
         <div className="menu-content">
           <h2 className="menu-header">{selectedCategory}</h2>
           <div className="menu-cards">
@@ -110,24 +83,108 @@ const MenuPage = () => {
                 image={item.image}
                 price={item.price}
                 pizzaSize={item.size}
+                addToCart={() => addToCart(item)}
               />
             ))}
           </div>
         </div>
 
-        {/* Right Checkout Section */}
         <div className="checkout-section">
           <h3>Order Summary</h3>
           <ul className="order-list">
-            <li>Pizza Margherita - Rs. 1200</li>
-            <li>Veggie Supreme - Rs. 1400</li>
+            {cart.length === 0 ? (
+              <li>Your cart is empty</li>
+            ) : (
+              cart.map((item, index) => (
+                <li key={index}>
+                  {item.name} - Rs. {item.price}
+                </li>
+              ))
+            )}
           </ul>
           <div className="total-price">
-            <p>Total: Rs. 2600</p>
+            <p>Total: Rs. {calculateTotal()}</p>
           </div>
-          <button className="checkout-button">Checkout</button>
+          <button className="checkout-button" disabled={cart.length === 0} onClick={handleCheckout}>
+            Checkout
+          </button>
         </div>
       </div>
+
+      {/* Order Confirmation Popup */}
+      {showPopup && (
+  <div className="popup-overlay">
+    <div className="popup">
+      <h2>Confirm Your Order</h2>
+      <ul>
+        {cart.map((item, index) => (
+          <li key={index}>{item.name} - Rs. {item.price}</li>
+        ))}
+      </ul>
+      <p>Total: Rs. {calculateTotal()}</p>
+      <button
+        className="confirm-button"
+        onClick={async () => {
+          try {
+            // Get user email from local storage
+            const user = JSON.parse(localStorage.getItem('user'));
+            if (!user || !user.email) {
+              alert('User not logged in');
+              return;
+            }
+
+            // Prepare order data
+            const orderData = {
+              userEmail: user.email,
+              items: cart.map((item) => ({
+                item_name: item.name,
+                item_price: item.price,
+              })),
+            };
+
+            // Send order data to the backend
+            const response = await fetch('http://localhost:5000/add_order', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(orderData),
+            });
+
+            if (response.ok) {
+              const result = await response.json();
+              alert('Order placed successfully!');
+              navigate('/orders')
+
+              // Save order data to local storage
+              const orders = JSON.parse(localStorage.getItem('orders')) || [];
+              
+              orders.push(result.order);
+              localStorage.setItem('orders', JSON.stringify(orders));
+              console.log('Local Storage Orders:', JSON.parse(localStorage.getItem('orders')));
+
+              // Close the popup and clear the cart
+              closePopup();
+              setCart([]); // Assuming you have a setCart function to clear the cart
+            } else {
+              const errorData = await response.json();
+              alert(`Failed to place order: ${errorData.message}`);
+            }
+          } catch (error) {
+            console.error('Error placing order:', error);
+            alert('An error occurred. Please try again.');
+          }
+        }}
+      >
+        Confirm Order
+      </button>
+      <button className="cancel-button" onClick={closePopup}>
+        Cancel
+      </button>
+    </div>
+  </div>
+)}
+
     </div>
   );
 };
